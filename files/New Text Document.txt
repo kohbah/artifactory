@@ -1,0 +1,1 @@
+SHIFT+TAB to go backwards in most situations. There are instances where you have a window in Excel (usually applies to the PC version) where you have to press CTRL+SHIFT+TAB to cycle backwards on the tabs in the window (whereas CTRL+TAB moves forwards on the tabs).
