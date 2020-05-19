@@ -1,0 +1,3 @@
+---
+- name: artifactory
+  src: https://github.com/kohbah/artifactory.git
