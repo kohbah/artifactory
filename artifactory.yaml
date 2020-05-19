@@ -3,4 +3,4 @@
   user: ec2-user
   become: yes
   roles:
-   - robertdebock.httpd
+   - {{ robertdebock.httpd }}
