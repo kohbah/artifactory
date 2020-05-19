@@ -3,4 +3,4 @@
   user: ec2-user
   become: yes
   roles:
-   - artifactory
+   - role: '/home/awx/.ansible/roles'
