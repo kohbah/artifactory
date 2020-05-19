@@ -1,2 +1,28 @@
 ---
-# tasks file for artifactory
+  - name: 'downloading jfrog rmp'
+    get_url:
+     url: https://bintray.com/jfrog/artifactory-pro-rpms/download_file?file_path=jfrog-artifactory-pro%2Fjfrog-artifactory-pro-7.4.3.rpm
+     dest: /opt
+
+  - name: 'downloading jfrog jdbc'
+    get_url:
+     url: https://jdbc.postgresql.org/download/postgresql-42.2.12.jar
+     dest: /opt      
+
+  - name: 'install artifactory rpm'
+    yum:
+     name: /opt/jfrog-artifactory-pro-7.4.3.rpm 
+     state: present
+  - name: 'deleting system.yaml file'
+    file:
+     path: /opt/jfrog/artifactory/var/etc/system.yaml
+     state: absent
+  - name: 'copying new system.yaml file'
+    copy:
+     src: system.yaml
+     dest: /opt/jfrog/artifactory/var/etc/
+  - name: 'copying postgresql jdbc'
+    copy:
+     src: /opt/postgresql-42.2.12.jar
+     dest: /opt/jfrog/artifactory/var/bootstrap/artifactory/tomcat/lib
+     mode: 0766
