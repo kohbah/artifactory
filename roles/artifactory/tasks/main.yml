@@ -28,6 +28,6 @@
      remote_src: yes
      mode: 0766
   - name: 'starting artifactory service'
-    yum: 
+    service: 
      name: artifactory
      state: started
