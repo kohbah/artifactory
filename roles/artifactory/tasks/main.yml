@@ -25,4 +25,5 @@
     copy:
      src: /opt/postgresql-42.2.12.jar
      dest: /opt/jfrog/artifactory/var/bootstrap/artifactory/tomcat/lib
+     remote_src: yes
      mode: 0766
