@@ -2,4 +2,5 @@
 - hosts: all
   user: ec2-user
   roles:
-   - geerlingguy.nginx
+   - { role: geerlingguy.nginx }
+ 
