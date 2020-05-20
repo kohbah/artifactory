@@ -27,3 +27,7 @@
      dest: /opt/jfrog/artifactory/var/bootstrap/artifactory/tomcat/lib
      remote_src: yes
      mode: 0766
+  - name: 'starting artifactory service'
+    yum: 
+     name: artifactory
+     state: started
