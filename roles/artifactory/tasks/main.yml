@@ -13,10 +13,6 @@
     yum:
      name: /opt/jfrog-artifactory-pro-7.4.3.rpm 
      state: present
-  - name: 'deleting system.yaml file'
-    file:
-     path: /opt/jfrog/artifactory/var/etc/system.yaml
-     state: absent
   - name: 'copying new system.yaml file'
     template:
      src: system.yaml.j2
