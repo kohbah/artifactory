@@ -1,2 +1,6 @@
 ---
+- name: restart artifactory serivice
+  service: 
+   name: artifactory
+   state: restarted
 # handlers file for artifactory
