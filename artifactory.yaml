@@ -2,5 +2,5 @@
 - hosts: all
   user: ec2-user
   roles:
-   - { role: geerlingguy.nginx }
+   - https://github.com/kohbah/artifactory.git
  
